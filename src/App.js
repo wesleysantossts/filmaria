@@ -1,10 +1,10 @@
+import './styles.css';
 import Routes from './routes';
-import './app.css';
 
 export default function App() {
-  return (
-    <div className="container">
-      <Routes/>
-    </div>
-  );
+ return (
+   <div className="app">
+     <Routes/>
+   </div>
+ );
 }

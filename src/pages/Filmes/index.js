@@ -3,6 +3,7 @@ import './filmes.css';
 // useHistory - usado para redirecionar o usuário para outra página quando ele tentar acessar de um ID que não existe
 import { useParams, useHistory } from 'react-router-dom';
 import {useState, useEffect} from 'react';
+import {toast} from 'react-toastify';
 import api from '../../service/api';
 
 
@@ -17,7 +18,7 @@ export default function Filme(){
         async function loadFilme(){
             const res = await api.get(`r-api/?api=filmes/${id}`);
 
-            if(res.data.length == 0){
+            if(res.data.length === 0){
                 // Tentou acessar com ID que não existe, navego ele para a Home!
                     // replace - usado para trocar a rota
                 history.replace('/')
@@ -44,7 +45,9 @@ export default function Filme(){
         const hasFilme = filmesSalvos.some((filmeSalvo) => filmeSalvo.id === filme.id );
 
         if(hasFilme){
-            alert('Você já possui esse filme salvo.')
+
+            toast.error('Você já possui esse filme salvo.');
+            // alert('Você já possui esse filme salvo.')
 
             // para a execução do código aqui
             return
@@ -52,7 +55,8 @@ export default function Filme(){
 
         filmesSalvos.push(filme);
         localStorage.setItem('filmes', JSON.stringify(filmesSalvos));
-        alert('Filme salvo com sucesso!')
+        // alert('Filme salvo com sucesso!')
+        toast.success('Filme salvo com sucesso!')
     };
     
     

@@ -5,3 +5,50 @@
     align-items: center;
     width: 100%;
 }
+
+#meus-filmes {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    padding: 0;
+    min-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+span {
+    font-size: 22px;
+}
+
+button {
+    margin-left: 10px;
+    outline: none;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 4px 5px 4px 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background-color: brown;
+    color: white;
+}
+
+ul li div a {
+    text-decoration: none;
+    color: brown;
+}
+

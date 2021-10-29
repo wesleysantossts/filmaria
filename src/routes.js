@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Favoritos from './pages/Favoritos';
 import Filmes from './pages/Filmes/index';
+import Erro from './pages/Erro';
 
 const Routes = () => {
   return(
@@ -15,7 +16,7 @@ const Routes = () => {
         {/* path="/filme/:id" - para puxar o id do filme quando eu clico no link */}
         <Route exact path="/filme/:id" component={Filmes} />
 
-        <Route path="*" component={Home} />
+        <Route path="*" component={Erro} />
       </Switch>
     </BrowserRouter>
   )

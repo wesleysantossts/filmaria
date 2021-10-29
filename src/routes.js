@@ -12,6 +12,7 @@ const Routes = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/favoritos" component={Favoritos} />
+        {/* path="/filme/:id" - para puxar o id do filme quando eu clico no link */}
         <Route exact path="/filme/:id" component={Filmes} />
 
         <Route path="*" component={Home} />

@@ -35,31 +35,56 @@ export default function Filme(){
         // o "history, id" devem ser passados entre colchetes após a função do useEffect porque eles devem ser executados primeiro antes da função do useEffect ser executada (efeito ComponentDidUpdate)
     }, [history, id]);
 
+    function salvaFilme(){
+        const minhaLista = localStorage.getItem('filmes');
+        let filmesSalvos = JSON.parse(minhaLista) || [];
+
+        // se tiver algum filme salvo com esse ID precisa ignorar
+            // some((item) => {condição}) - método da array que retorna um Booleano
+        const hasFilme = filmesSalvos.some((filmeSalvo) => filmeSalvo.id === filme.id );
+
+        if(hasFilme){
+            alert('Você já possui esse filme salvo.')
+
+            // para a execução do código aqui
+            return
+        }
+
+        filmesSalvos.push(filme);
+        localStorage.setItem('filmes', JSON.stringify(filmesSalvos));
+        alert('Filme salvo com sucesso!')
+    };
+    
     
     if(loading){
         return(
             <div className="filme-info">
-                <h2>Carregando página...</h2>
+                <article>
+                    <h2>Carregando página...</h2>
+                </article>
             </div>
         )
     }
 
     return(
-        <div className="filme-info">
-                <h2> {filme.nome} </h2>
-                <img src={filme.foto} alt={filme.nome} />
-                
-                <h3>Sinopse</h3>
-                <p>{filme.sinopse}</p>
+        <div className="container">
+            <div className="filme-info">
+                <article key={filme.id}>
+                    <h2> {filme.nome} </h2>
+                    <img src={filme.foto} alt={filme.nome} />
+                    
+                    <h3>Sinopse</h3>
+                    <p>{filme.sinopse}</p>
 
-                <div className="botoes">
-                    <button onClick={()=>{}}>Salvar</button>
-                    <button>
-                        {/* target='blank' - usado para abrir o link em outra aba no navegador */}
-                        <a target='blank' href={`https://www.youtube.com/results?search_query=${filme.nome} trailer`}>Trailer</a>
-                    </button>
-                </div>
-
+                    <div className="botoes">
+                        <button onClick={salvaFilme}>Salvar</button>
+                        <button>
+                            {/* target='blank' - usado para abrir o link em outra aba no navegador */}
+                            <a target='blank' href={`https://www.youtube.com/results?search_query=${filme.nome} trailer`}>Trailer</a>
+                        </button>
+                    </div>
+                </article>
+            </div>
         </div>
     )
 };

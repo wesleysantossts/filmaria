@@ -1,8 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .filme-info {
     display: flex;
     flex-direction: column;
     width: 97%;
     max-width: 900px;
+}
+
+.filme-info article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFF;
+    margin: 15px;
+    padding: 15px;
 }
 
 .filme-info img {

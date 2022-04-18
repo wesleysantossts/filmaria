@@ -1,40 +1,58 @@
-# Getting Started with Create React App
+# Filmaria
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação desenvolvida durante o curso de React.abs
 
-## Available Scripts
+https://filmaria-rct.netlify.app/
 
-In the project directory, you can run:
+## Páginas
 
-### `yarn start`
+### Início
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Nesta página você encontrará os filmes lançados, suas sinopses e conseguirá ver os detalhes desses títulos selecionando o botão "Acessar" abaixo do banner.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<div align="center">
+  <img src="./src/assets/img/pgInicio.jpg" alt="Página Início" width="400px"/><br/>
+  <sub>Imagem 01: página "Início".</sub>
+</div>
 
-### `yarn test`
+### Detalhes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Aqui você encontrará o título, sinopse e poderá abrir o trailer do vídeo em outra aba no Youtube selecionado o botão "Trailer" na parte inferior da página. Além disso, é possível salvar o filme na página "Salvos" utilizando o botão "Salvar" abaixo da sinopse.
 
-### `yarn build`
+<div align="center">
+  <img src="./src/assets/img/pgDetalhes.jpg" alt="Página Detalhes" width="400px"/><br/>
+  <sub>Imagem 02: página "Detalhes".</sub>
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Salvos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Nesta página você encontrará os filmes que você salvou na página "Detalhes". 
 
-### `yarn eject`
+Para ver mais detalhes do título selecione a opção "Ver detalhes" que o direcionará para a página "Detalhes" ou selecione a opção "Excluir" para tirar o título da sua lista de filmes salvos. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<div align="center">
+  <img src="./src/assets/img/pgSalvos.jpg" alt="Página Salvos" width="400px"/><br/>
+  <sub>Imagem 03: página "Salvos".</sub>
+</div>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tecnologias utilizadas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [x] React;
+- [x] React Components
+- [x] API REST.
+- [x] Axios.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Desenvolvimento
+
+<table>
+  <tr>
+    <td border="1px solid #ddd" align="center">
+      <a href="https://github.com/wesleysantossts">
+        <img src="https://avatars.githubusercontent.com/u/56703526?v=4" width="100px" alt="Wesley Santos"/>
+        <br/>
+        <sub>Wesley Santos</sub>
+      </a>
+    </td>
+  </tr>
+</table>

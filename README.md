@@ -1,6 +1,12 @@
 # Filmaria
 
-Aplicação desenvolvida durante o curso de React.abs
+<div style="display: inline-block">
+  <img src="https://img.shields.io/github/license/wesleysantossts/filmaria?color=brightgreen" />
+  <img src="https://img.shields.io/github/last-commit/wesleysantossts/filmaria.svg" />
+  <img src="https://img.shields.io/github/repo-size/wesleysantossts/filmaria?color=brightgreen" />
+</div><br/>
+
+Aplicação desenvolvida durante o curso de React.
 
 https://filmaria-rct.netlify.app/
 
